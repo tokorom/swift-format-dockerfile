@@ -15,6 +15,7 @@ RUN git clone -b  $SWIFT_FORMAT_BRANCH $SWIFT_FORMAT_REPOSITORY _swift-format \
     && cd
 
 ADD entrypoint.sh /usr/local/bin/entrypoint
+RUN chmod +x /usr/local/bin/entrypoint
 
 ENTRYPOINT [ "entrypoint" ]
 CMD [ "lint", "--recursive", "." ]
