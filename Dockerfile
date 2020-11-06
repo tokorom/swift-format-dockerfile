@@ -13,3 +13,8 @@ RUN git clone -b  $SWIFT_FORMAT_BRANCH $SWIFT_FORMAT_REPOSITORY _swift-format \
     && swift build -c release \
     && ln .build/release/swift-format /usr/local/bin/swift-format \
     && cd
+
+ADD entrypoint.sh /usr/local/bin/entrypoint
+
+ENTRYPOINT [ "entrypoint" ]
+CMD [ "lint", "--recursive", "." ]
