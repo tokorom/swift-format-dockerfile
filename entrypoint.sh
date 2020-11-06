@@ -1,3 +1,3 @@
 #!/bin/sh
 
-swift-format $@
+swift-format $SWIFT_FORMAT_ARGUMENTS $@
