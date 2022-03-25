@@ -1,7 +1,7 @@
-FROM swift:5.5
+FROM swift:5.6
 
 ARG SWIFT_FORMAT_REPOSITORY="https://github.com/apple/swift-format.git"
-ARG SWIFT_FORMAT_BRANCH="swift-5.5-branch"
+ARG SWIFT_FORMAT_BRANCH="release/5.6"
 
 LABEL repository "https://github.com/tokorom/swift-format-dockerfile"
 LABEL homepage "https://github.com/tokorom/swift-format-dockerfile"
